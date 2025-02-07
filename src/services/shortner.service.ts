@@ -5,6 +5,7 @@ export const get_shortened_url = async (id: string): Promise<ShortUrl> => {
 	return shortened_url;
 };
 
-export const shorten_url = async (original_url: string): Promise<string> => {
-	return original_url;
+export const shorten_url = async (original_url: string): Promise<{ short_url: string }> => {
+	const shorten_url = await db.shorten_url(original_url);
+	return shorten_url;
 };

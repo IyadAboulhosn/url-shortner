@@ -11,3 +11,9 @@ export const get_shortened_url = async (id: string): Promise<ShortUrl> => {
 	console.log(shortened_url);
 	return shortened_url;
 };
+
+export const shorten_url = async (original_url: string): Promise<{ short_url: string }> => {
+	console.log(original_url);
+	const body = {};
+	return { short_url: original_url };
+};
